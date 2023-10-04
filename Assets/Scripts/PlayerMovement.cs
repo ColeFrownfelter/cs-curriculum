@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         xDirection = Input.GetAxis("Horizontal");
         xVector = xDirection * walkingspeed * Time.deltaTime;
-        
-        transform.position = transform.position + new Vector3(xVector, y:0, z:0)
+
+        transform.position = transform.position + new Vector3(xVector, y: 0, z: 0);
     }
 }
