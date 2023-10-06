@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool overworld;
+    
     // Start is called before the first frame update
-    private float walkingspeed;
+    float walkingspeed;
 
-    private float xDirection;
+    float xDirection;
 
-    private float xVector;
+    float xVector;
     
     void Start()
     {
         walkingspeed = 5f;
+        if (overworld)
+        {
+            
+        }
     }
 
     // Update is called once per frame
