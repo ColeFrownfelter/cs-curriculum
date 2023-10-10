@@ -7,18 +7,24 @@ public class PlayerMovement : MonoBehaviour
     public bool overworld;
     
     // Start is called before the first frame update
-    float walkingspeed;
-
-    float xDirection;
-
-    float xVector;
+    public float xspeed;
+    public float yspeed;
+    public float xDirection;
+    public float yDirection;
+    public float xVector;
+    public float yVector;
     
     void Start()
     {
-        walkingspeed = 5f;
+        xspeed = 4f;
         if (overworld)
         {
-            
+            xspeed = 3f;
+            yspeed = 3f;
+        }
+        else
+        {
+            yspeed = 0f;
         }
     }
 
@@ -26,8 +32,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xDirection = Input.GetAxis("Horizontal");
-        xVector = xDirection * walkingspeed * Time.deltaTime;
+        xVector = xDirection * xspeed * Time.deltaTime;
+        yDirection = Input.GetAxis("Vertical");
+        yVector = yDirection * yspeed * Time.deltaTime;
 
-        transform.position = transform.position + new Vector3(xVector, y: 0, z: 0);
+        transform.position = transform.position + new Vector3(xVector, yVector, z: 0);
     }
 }

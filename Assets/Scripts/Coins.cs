@@ -10,11 +10,6 @@ public class Coins : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        {
-            coins = coins + 1;
-            //SetActive(false)
-        }
 
     }
 
@@ -23,4 +18,16 @@ public class Coins : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (CompareTag("Coin"))
+        {
+            coins = coins + 1;
+            gameObject.SetActive(false);
+        }
+    }
+    
+    
+    
 }
