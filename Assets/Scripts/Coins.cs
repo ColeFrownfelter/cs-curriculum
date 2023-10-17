@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public int coins;
 
     public Hud hud;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        hud = GameObject.FindObjectOfType<Hud>();
     }
 
     // Update is called once per frame
@@ -25,7 +24,7 @@ public class Coins : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            coins = coins + 1;
+            hud.coins = hud.coins + 1;
             other.gameObject.SetActive(false);
         }
     }

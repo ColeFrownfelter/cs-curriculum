@@ -8,6 +8,8 @@ public class Hud : MonoBehaviour
 
 {
     public static Hud hud;
+    public int coins;
+    public int health;
     private void Awake()
     {
         //if still exists
@@ -25,7 +27,8 @@ public class Hud : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hud.health = 5;
+        hud.coins = 0;
     }
 
     // Update is called once per frame
