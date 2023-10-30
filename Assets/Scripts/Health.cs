@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
             hud.health = hud.health - 1;
         }
 
-        if (other.gameObject.CompareTag("heart"))
+        if (other.gameObject.CompareTag("Heart"))
         {
             hud.health = hud.health + 1;
             other.gameObject.SetActive(false);
