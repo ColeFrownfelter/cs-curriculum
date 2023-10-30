@@ -1,15 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
+using TMPro;
 using UnityEngine;
 
 public class Hud : MonoBehaviour
 
 
 {
+    public TextMeshProUGUI coinsText;
+    public TextMeshProUGUI healthText;
+    
+    
     public static Hud hud;
     public int coins;
     public int health;
+    
     private void Awake()
     {
         //if still exists
@@ -34,6 +41,8 @@ public class Hud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        coinsText.text = "Coins: " + coins.ToString();
+        healthText.text = "Health: " + health.ToString();
+
     }
 }

@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         timer = originalTimer;
-        
+        hud = GameObject.FindObjectOfType<Hud>();
     }
 
     // Update is called once per frame
@@ -28,11 +28,18 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("spike"))
+        print(message:"hit something");
+        if (other.gameObject.CompareTag("Spikes"))
         {
+            print(message:"hit a spike");
             hud.health = hud.health - 1;
-
-
         }
+
+        if (other.gameObject.CompareTag("heart"))
+        {
+            hud.health = hud.health + 1;
+            other.gameObject.SetActive(false);
+        }
+
     }
 }
