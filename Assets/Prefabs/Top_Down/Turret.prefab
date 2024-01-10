@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4844124505973536318}
   - component: {fileID: -8321157105715108983}
   - component: {fileID: -28657926046577547}
+  - component: {fileID: 1149186595375232723}
+  - component: {fileID: -2557674699526017038}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -130,3 +132,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!58 &1149186595375232723
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040774585044851471}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &-2557674699526017038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040774585044851471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9eaeb545a404860bd044ea7b0fa996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireball: {fileID: 0}
+  shootpoint: {fileID: 0}
+  turretTimer: 0
+  inrange: 0
+  startTime: 0
+  target: {fileID: 0}
