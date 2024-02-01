@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
         xspeed = 4f;
         if (overworld)
         {
-            xspeed = 6f;
-            yspeed = 6f;
+            xspeed = 4f;
+            yspeed = 4f;
         }
         else
         {
